@@ -1,0 +1,137 @@
+
+"You are tasked with analyzing the DSCOVR data portal at NOAA's National Geophysical Data Center. For each section below, provide detailed analysis and capabilities:
+
+1. DATA STRUCTURE MAPPING
+- Catalog all available data products including:
+  * Magnetometer (MAG) measurements
+  * Solar wind plasma observations
+  * EPIC (Earth Polychromatic Imaging Camera) imagery
+  * Space weather alerts and forecasts
+- For each data product, identify:
+  * Temporal resolution (cadence)
+  * File formats (JSON, CSV, FITS, etc.)
+  * Authentication requirements
+  * API endpoint structures if available
+  * Size limitations and data retention policies
+
+2. ACCESS PROTOCOLS
+- Document all available access methods:
+  * REST API endpoints
+  * FTP/SFTP services
+  * Direct download capabilities 
+  * Bulk data retrieval options
+- For each method specify:
+  * Rate limits
+  * Required headers
+  * Authentication tokens/keys
+  * Response formats
+  * Error handling specifications
+
+3. PARAMETER DEFINITIONS
+- For Magnetometer data:
+  * Bx, By, Bz components in GSE/GSM coordinates
+  * Field magnitude calculations
+  * Uncertainty metrics
+- For Plasma data:
+  * Proton density
+  * Solar wind velocity components
+  * Thermal velocity
+  * Temperature measurements
+- For EPIC imagery:
+  * Available wavelengths/channels
+  * Image formats and resolutions
+  * Metadata structure
+  * Coordinate system references
+
+4. QUALITY CONTROL
+- Define handling for:
+  * Missing data gaps
+  * Instrument anomalies
+  * Bad data flags
+  * Calibration periods
+  * Cross-validation methods
+
+5. TEMPORAL COVERAGE
+- Document for each instrument:
+  * Start of data availability
+  * Most recent data latency
+  * Data embargo periods if any
+  * Archive access procedures
+  * Real-time vs delayed data streams
+
+6. COORDINATE SYSTEMS
+- Detail all relevant frameworks:
+  * GSE (Geocentric Solar Ecliptic)
+  * GSM (Geocentric Solar Magnetospheric)
+  * Earth-centered coordinates
+  * Conversion utilities needed
+
+7. DERIVATIVE PRODUCTS
+- Identify calculated parameters:
+  * Space weather indices
+  * Alert thresholds
+  * Forecast products
+  * Statistical summaries
+
+8. IMPLEMENTATION GUIDANCE
+- Provide examples for:
+  * API query construction
+  * Data parsing methods
+  * Quality flag interpretation
+  * Error handling protocols
+  * Rate limit management
+
+9. USE LIMITATIONS
+- Document clearly:
+  * Attribution requirements
+  * Usage restrictions
+  * Citation guidelines
+  * Commercial use policies
+  * Redistribution rules
+
+10. ERROR HANDLING
+Create specific responses for:
+- HTTP status codes:
+  * 400: Bad Request formatting
+  * 401: Authentication failures
+  * 403: Access forbidden scenarios
+  * 429: Rate limit exceeded
+  * 500: Server errors
+- Data quality flags:
+  * Instrument malfunctions
+  * Calibration periods
+  * Known anomalies
+  * Missing data handling
+
+11. RESPONSE FORMATTING
+For each data type, specify exact output structure:
+```json
+{
+  "metadata": {
+    "instrument": "string",
+    "timestamp": "ISO8601",
+    "quality_flags": ["array"],
+    "coordinate_system": "string"
+  },
+  "data": {
+    "primary_measurements": {},
+    "derived_parameters": {},
+    "uncertainties": {}
+  }
+}
+```
+
+12. VALIDATION RULES
+Define explicit checks for:
+- Data ranges:
+  * Physical limits for each parameter
+  * Statistical outlier thresholds
+  * Required field presence
+  * Format compliance
+- Quality metrics:
+  * Minimum completeness requirements
+  * Temporal consistency
+  * Cross-parameter validation
+  * Instrument state verification
+
+Would you like me to continue with additional sections for analysis workflows, data transformation pipelines, or integration patterns? I can also provide more granular detail on any of the existing sections.​​​​​​​​​​​​​​​​
